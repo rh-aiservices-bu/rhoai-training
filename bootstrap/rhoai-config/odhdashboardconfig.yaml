@@ -1,52 +1,3 @@
-# apiVersion: opendatahub.io/v1alpha
-# kind: OdhDashboardConfig
-# metadata:
-#   name: odh-dashboard-config
-#   namespace: redhat-ods-applications
-#   annotations:
-#     argocd.argoproj.io/sync-wave: "2"
-# spec:
-#   modelServerSizes:
-#     - name: (Custom Size) Small
-#       resources:
-#         limits:
-#           cpu: '1'
-#           memory: 2Gi
-#         requests:
-#           cpu: '1'
-#           memory: 1Gi
-#     # - name: 'Custom Size - Medium'
-#     #   resources:
-#     #     limits:
-#     #       cpu: '2'
-#     #       memory: 4Gi
-#     #     requests:
-#     #       cpu: '2'
-#     #       memory: 2Gi
-#   notebookController:
-#     enabled: true
-#     notebookNamespace: rhods-notebooks
-#     pvcSize: 5Gi
-#   notebookSizes:
-#     - name: (Custom Size) Small
-#       resources:
-#         limits:
-#           cpu: '2'
-#           memory: 6Gi
-#         requests:
-#           cpu: '1'
-#           memory: 3Gi
-#     # - name: 'Custom Size - Medium'
-#     #   resources:
-#     #     limits:
-#     #       cpu: '4'
-#     #       memory: 8Gi
-#     #     requests:
-#     #       cpu: '2'
-#     #       memory: 4Gi
-#   templateOrder: []
-
-
 ---
 apiVersion: opendatahub.io/v1alpha
 kind: OdhDashboardConfig
@@ -121,7 +72,7 @@ spec:
   notebookController:
     enabled: true
     notebookNamespace: rhods-notebooks
-    pvcSize: 20Gi
+    pvcSize: 5Gi
   notebookSizes:
     - name: Custom Size - Small
       resources:
