@@ -51,7 +51,7 @@
 apiVersion: opendatahub.io/v1alpha
 kind: OdhDashboardConfig
 metadata:
-  name: odh-dashboard-config
+  name: odh-dashboard-config-renamed
   namespace: redhat-ods-applications
   annotations:
     argocd.argoproj.io/sync-wave: "2"
