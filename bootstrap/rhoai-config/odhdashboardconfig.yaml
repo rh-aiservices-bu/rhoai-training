@@ -7,7 +7,7 @@ metadata:
     argocd.argoproj.io/sync-wave: "2"
 spec:
   modelServerSizes:
-    - name: 'Custom Size - Small'
+    - name: (Custom Size) Small
       resources:
         limits:
           cpu: '1'
@@ -28,7 +28,7 @@ spec:
     notebookNamespace: rhods-notebooks
     pvcSize: 5Gi
   notebookSizes:
-    - name: 'Custom Size - Small'
+    - name: (Custom Size) Small
       resources:
         limits:
           cpu: '2'
