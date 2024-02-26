@@ -107,37 +107,53 @@ spec:
     notebookNamespace: rhods-notebooks
     pvcSize: 20Gi
   notebookSizes:
-    - name: Small
+    - name: Custom Size - Small
       resources:
         limits:
           cpu: '2'
-          memory: 8Gi
+          memory: 6Gi
         requests:
           cpu: '1'
+          memory: 3Gi
+    - name: Custom Size - Medium
+      resources:
+        limits:
+          cpu: '4'
           memory: 8Gi
-    - name: Medium
-      resources:
-        limits:
-          cpu: '6'
-          memory: 24Gi
         requests:
-          cpu: '3'
-          memory: 24Gi
-    - name: Large
-      resources:
-        limits:
-          cpu: '14'
-          memory: 56Gi
-        requests:
-          cpu: '7'
-          memory: 56Gi
-    - name: X Large
-      resources:
-        limits:
-          cpu: '30'
-          memory: 120Gi
-        requests:
-          cpu: '15'
-          memory: 120Gi
+          cpu: '2'
+          memory: 4Gi
+    # - name: Small
+    #   resources:
+    #     limits:
+    #       cpu: '2'
+    #       memory: 8Gi
+    #     requests:
+    #       cpu: '1'
+    #       memory: 8Gi
+    # - name: Medium
+    #   resources:
+    #     limits:
+    #       cpu: '6'
+    #       memory: 24Gi
+    #     requests:
+    #       cpu: '3'
+    #       memory: 24Gi
+    # - name: Large
+    #   resources:
+    #     limits:
+    #       cpu: '14'
+    #       memory: 56Gi
+    #     requests:
+    #       cpu: '7'
+    #       memory: 56Gi
+    # - name: X Large
+    #   resources:
+    #     limits:
+    #       cpu: '30'
+    #       memory: 120Gi
+    #     requests:
+    #       cpu: '15'
+    #       memory: 120Gi
   templateDisablement: []
   templateOrder: []
