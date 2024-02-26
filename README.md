@@ -1,1 +1,1 @@
-# rhoai-training-env
+# rhoai-training

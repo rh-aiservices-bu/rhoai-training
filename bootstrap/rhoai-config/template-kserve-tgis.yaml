@@ -1,0 +1,37 @@
+﻿kind: Template
+apiVersion: template.openshift.io/v1
+metadata:
+  name: template-kserve-tgis
+  namespace: redhat-ods-applications
+  labels:
+    opendatahub.io/dashboard: 'true'
+  annotations:
+    opendatahub.io/modelServingSupport: '["single"]'
+    argocd.argoproj.io/sync-wave: "1"
+objects:
+  - apiVersion: serving.kserve.io/v1alpha1
+    kind: ServingRuntime
+    metadata:
+      annotations:
+        openshift.io/display-name: Text Generation Inference Service
+      name: kserve-tgis
+    spec:
+      multiModel: false
+      supportedModelFormats:
+        - autoSelect: true
+          name: pytorch
+      containers:
+        - name: kserve-container
+          image: quay.io/opendatahub/text-generation-inference:stable
+          command: ["text-generation-launcher"]
+          args:
+            - "--model-name=/mnt/models/"
+            - "--port=3000"
+            - "--grpc-port=8033"
+          env:
+            - name: TRANSFORMERS_CACHE
+              value: /tmp/transformers_cache
+          ports:
+            - containerPort: 8033
+              name: h2c
+              protocol: TCP

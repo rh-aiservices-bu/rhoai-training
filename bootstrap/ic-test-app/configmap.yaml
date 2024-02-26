@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ic-test-app-configmap
+  namespace: caikit-testing
+  labels:
+    app: ic-test-app
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"  
+data:
+  rhoai-test-drive: "rhoai-test-drive"
