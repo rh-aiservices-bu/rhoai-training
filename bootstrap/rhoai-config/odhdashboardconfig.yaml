@@ -7,7 +7,7 @@ metadata:
     argocd.argoproj.io/sync-wave: "2"
 spec:
   modelServerSizes:
-    - name: Custom Size - Small
+    - name: 'Custom Size - Small'
       resources:
         limits:
           cpu: '1'
@@ -15,7 +15,7 @@ spec:
         requests:
           cpu: '1'
           memory: 1Gi
-    - name: Custom Size - Medium
+    - name: 'Custom Size - Medium'
       resources:
         limits:
           cpu: '2'
@@ -29,7 +29,7 @@ spec:
     pvcSize: 5Gi
     gpuSetting: '1'
   notebookSizes:
-    - name: Custom Size - Small
+    - name: 'Custom Size - Small'
       resources:
         limits:
           cpu: '2'
@@ -37,7 +37,7 @@ spec:
         requests:
           cpu: '1'
           memory: 3Gi
-    - name: Custom Size - Medium
+    - name: 'Custom Size - Medium'
       resources:
         limits:
           cpu: '4'
