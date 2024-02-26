@@ -6,54 +6,27 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "2"
 spec:
-  dashboardConfig:
-    enablement: true
-    disableSupport: false
-    disablePipelines: false
-    disableISVBadges: false
-    disableUserManagement: false
-    disableInfo: false
-    disableClusterManager: false
-    disableBYONImageStream: false
-    disableTracking: false
   modelServerSizes:
-    - name: Custom Size - Small
+    - name: Standard
       resources:
         limits:
           cpu: '1'
-          memory: 2Gi
+          memory: 1Gi
         requests:
           cpu: '1'
           memory: 1Gi
-    - name: Custom Size - Medium
-      resources:
-        limits:
-          cpu: '2'
-          memory: 4Gi
-        requests:
-          cpu: '2'
-          memory: 2Gi
   notebookController:
     enabled: true
     notebookNamespace: rhods-notebooks
-    pvcSize: 20Gi
+    pvcSize: 5Gi
+    gpuSetting: '4'
   notebookSizes:
-    - name: Custom Size - Small
+    - name: Standard
       resources:
         limits:
           cpu: '2'
-          memory: 6Gi
-        requests:
-          cpu: '1'
-          memory: 3Gi
-    - name: Custom Size - Medium
-      resources:
-        limits:
-          cpu: '4'
           memory: 8Gi
         requests:
-          cpu: '2'
-          memory: 4Gi
+          cpu: '1'
+          memory: 6Gi
   templateOrder: []
-
-
