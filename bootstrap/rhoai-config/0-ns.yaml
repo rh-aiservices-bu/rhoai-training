@@ -1,0 +1,69 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: redhat-ods-operator
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+---
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  name: rhods-operator
+  namespace: redhat-ods-operator
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: Subscription
+metadata:
+  name: rhods-operator
+  namespace: redhat-ods-operator
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+spec:
+  name: rhods-operator
+  installPlanApproval: Manual
+  channel: stable
+  source: redhat-operators
+  sourceNamespace: openshift-marketplace
+  startingCSV: rhods-operator.2.6.0
+---
+apiVersion: datasciencecluster.opendatahub.io/v1
+kind: DataScienceCluster
+metadata:
+  name: default-dsc
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+spec:
+  components:
+    codeflare:
+      devFlags: {}
+      managementState: Managed
+    dashboard:
+      devFlags: {}
+      managementState: Managed
+    datasciencepipelines:
+      devFlags: {}
+      managementState: Managed
+    kserve:
+      devFlags: {}
+      managementState: Managed
+      serving:
+        ingressGateway:
+          certificate:
+            type: SelfSigned
+        managementState: Managed
+        name: knative-serving
+    modelmeshserving:
+      devFlags: {}
+      managementState: Managed
+    ray:
+      devFlags: {}
+      managementState: Managed
+    trustyai:
+      devFlags: {}
+      managementState: Removed
+    workbenches:
+      devFlags: {}
+      managementState: Managed

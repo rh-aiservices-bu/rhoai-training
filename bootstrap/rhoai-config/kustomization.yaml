@@ -6,8 +6,10 @@ namespace: redhat-ods-applications
 
 resources:
 # wave 1
+- 0-ns.yaml
+# wave 2
 - odhdashboardconfig.yaml
-- template-kserve-ovms.yaml  
-- template-kserve-tgis.yaml  
-  # wave 2
+- template-kserve-ovms.yaml
+- template-kserve-tgis.yaml
+  # wave 3
 - images-puller.yaml

@@ -4,7 +4,7 @@ metadata:
   name: odh-dashboard-config
   namespace: redhat-ods-applications
   annotations:
-    argocd.argoproj.io/sync-wave: "1"
+    argocd.argoproj.io/sync-wave: "2"
 spec:
   modelServerSizes:
     - name: Custom Size - Small
