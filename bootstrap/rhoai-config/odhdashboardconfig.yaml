@@ -6,6 +6,16 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "2"
 spec:
+  dashboardConfig:
+    enablement: true
+    disableSupport: false
+    disablePipelines: false
+    disableISVBadges: false
+    disableUserManagement: false
+    disableInfo: false
+    disableClusterManager: false
+    disableBYONImageStream: false
+    disableTracking: false
   modelServerSizes:
     - name: Custom Size - Small
       resources:
