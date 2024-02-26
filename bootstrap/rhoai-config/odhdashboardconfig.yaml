@@ -27,7 +27,6 @@ spec:
     enabled: true
     notebookNamespace: rhods-notebooks
     pvcSize: 5Gi
-    gpuSetting: '1'
   notebookSizes:
     - name: 'Custom Size - Small'
       resources:
