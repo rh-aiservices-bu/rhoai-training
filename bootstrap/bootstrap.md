@@ -18,6 +18,9 @@ oc  -n openshift-gitops  patch applicationset/bootstrap \
 #     --type merge \
 #     -p '{"spec":{"generators":[{"list":{"elements":[{"cluster":"in-cluster","name":"ic-test-app","path":"bootstrap/ic-test-app","repoURL":"https://github.com/rh-aiservices-bu/rhoai-training.git","targetRevision":"main","url":"https://kubernetes.default.svc"}]}}]}}'
 
+## all images:
+oc get pods -n user1-test-pipelines -o jsonpath="{..image}" | tr -s '[[:space:]]' '\n' | sort | uniq
+
 
 
 ```

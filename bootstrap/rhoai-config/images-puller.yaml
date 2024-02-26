@@ -85,7 +85,7 @@ spec:
     spec:
       containers:
         - name: mariadb
-          image: registry.redhat.io/rhel8/mariadb-103@sha256:2370ca7fd91c0d35910006c8ba40bb9651244b2a42050cb9b2dd9d5163155e15
+          image: registry.redhat.io/rhel8/mariadb-103@sha256:b3a6f3fecc2629b61a8940e792e623318c46fd71585486794f6cebb76c89b5df
           command: ["tail"]
           args: ["-f", "/dev/null"]
           resources:
@@ -95,7 +95,7 @@ spec:
               cpu: 10m
               memory: 10Mi
         - name: ds-pipeline-scheduledworkflow-pipelines-definition
-          image: registry.redhat.io/rhods/odh-ml-pipelines-scheduledworkflow-rhel8@sha256:17cb168262d64409c613d09815a122958e69c29c1b78218f5f8a47af0a76b3f7
+          image: registry.redhat.io/rhoai/odh-ml-pipelines-scheduledworkflow-rhel8@sha256:70883e3045673fb3571a460c93e1b4502dcdf8f8bf096f85180dbb81cea11efa
           command: ["tail"]
           args: ["-f", "/dev/null"]
           resources:
@@ -105,7 +105,7 @@ spec:
               cpu: 10m
               memory: 10Mi
         - name: ds-pipeline-pipelines-definition
-          image: registry.redhat.io/rhods/odh-ml-pipelines-api-server-rhel8@sha256:e1a5ceff2354b5ea787838143338848727a0dba4240fe8ed84350128603399e9
+          image: registry.redhat.io/rhoai/odh-ml-pipelines-api-server-rhel8@sha256:b2b401d377707028f4ee5e5b3207d7034f55f22ff8980b31773ab02ca96c47e1
           command: ["tail"]
           args: ["-f", "/dev/null"]
           resources:
@@ -115,7 +115,7 @@ spec:
               cpu: 10m
               memory: 10Mi
         - name: ds-pipeline-persistenceagent-pipelines-definition
-          image: registry.redhat.io/rhods/odh-ml-pipelines-persistenceagent-rhel8@sha256:e87c4aab19435d4d3ded11acf53506a586127a4ec670db65bd25c72ed66c3537
+          image: registry.redhat.io/rhoai/odh-ml-pipelines-persistenceagent-rhel8@sha256:75621c362fcbf05e1db0dcdc158e48ae9f39174c5f19dce33151d7ccb712bd17
           command: ["tail"]
           args: ["-f", "/dev/null"]
           resources:
