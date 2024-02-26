@@ -7,26 +7,42 @@ metadata:
     argocd.argoproj.io/sync-wave: "2"
 spec:
   modelServerSizes:
-    - name: Standard
+    - name: Custom Size - Small
       resources:
         limits:
           cpu: '1'
-          memory: 1Gi
+          memory: 2Gi
         requests:
           cpu: '1'
           memory: 1Gi
+    - name: Custom Size - Medium
+      resources:
+        limits:
+          cpu: '2'
+          memory: 4Gi
+        requests:
+          cpu: '2'
+          memory: 2Gi
   notebookController:
     enabled: true
     notebookNamespace: rhods-notebooks
     pvcSize: 5Gi
     gpuSetting: '4'
   notebookSizes:
-    - name: Standard
+    - name: Custom Size - Small
       resources:
         limits:
           cpu: '2'
-          memory: 8Gi
+          memory: 6Gi
         requests:
           cpu: '1'
-          memory: 6Gi
+          memory: 3Gi
+    - name: Custom Size - Medium
+      resources:
+        limits:
+          cpu: '4'
+          memory: 8Gi
+        requests:
+          cpu: '2'
+          memory: 4Gi
   templateOrder: []
