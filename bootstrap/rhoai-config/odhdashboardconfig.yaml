@@ -15,14 +15,14 @@ spec:
         requests:
           cpu: '1'
           memory: 1Gi
-    - name: 'Custom Size - Medium'
-      resources:
-        limits:
-          cpu: '2'
-          memory: 4Gi
-        requests:
-          cpu: '2'
-          memory: 2Gi
+    # - name: 'Custom Size - Medium'
+    #   resources:
+    #     limits:
+    #       cpu: '2'
+    #       memory: 4Gi
+    #     requests:
+    #       cpu: '2'
+    #       memory: 2Gi
   notebookController:
     enabled: true
     notebookNamespace: rhods-notebooks
@@ -36,12 +36,12 @@ spec:
         requests:
           cpu: '1'
           memory: 3Gi
-    - name: 'Custom Size - Medium'
-      resources:
-        limits:
-          cpu: '4'
-          memory: 8Gi
-        requests:
-          cpu: '2'
-          memory: 4Gi
+    # - name: 'Custom Size - Medium'
+    #   resources:
+    #     limits:
+    #       cpu: '4'
+    #       memory: 8Gi
+    #     requests:
+    #       cpu: '2'
+    #       memory: 4Gi
   templateOrder: []
