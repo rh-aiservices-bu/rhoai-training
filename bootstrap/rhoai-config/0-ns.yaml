@@ -9,7 +9,7 @@ metadata:
 apiVersion: operators.coreos.com/v1
 kind: OperatorGroup
 metadata:
-  name: rhods-operator
+  name: rhods-ods-operator
   namespace: redhat-ods-operator
   annotations:
     argocd.argoproj.io/sync-wave: "1"
