@@ -36,6 +36,8 @@ metadata:
   namespace: rhods-notebooks
   labels:
     k8s-app: image-puller
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
 spec:
   selector:
     matchLabels:
@@ -74,6 +76,8 @@ metadata:
   namespace: rhods-notebooks
   labels:
     k8s-app: image-puller
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
 spec:
   selector:
     matchLabels:
