@@ -31,4 +31,5 @@ The source for workbenches can be found here:
 
 ### AI-on-OpenShift
 
-[AI-on-OpenShift](https://ai-on-openshift.io/) is an unsupported website that provides resources and how-tos for using AI on OpenShift, including material related to RHOAI.
+[AI-on-OpenShift](https://ai-on-openshift.io/) is a website that provides resources and how-tos for using AI on OpenShift, including material related to RHOAI. 
+A lot of its contributors are Red Hat employees, but the recipes contained in it cover topics that go beyond what is officially supported by Red Hat. 
