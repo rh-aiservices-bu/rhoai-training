@@ -5,7 +5,6 @@
 Start by downloading this [zip file](https://github.com/rh-aiservices-bu/rhoai-training/archive/refs/heads/main.zip) which contains all the material for this training.  
 
 Reading material (slides and hands-on walkthroughs) can be found in the */content* folder of the zip file.  
-Lab material (code, yaml files, etc) can be found in the */lab-material* folder of the zip file.  
 
 ## References
 
