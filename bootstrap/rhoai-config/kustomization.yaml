@@ -5,6 +5,8 @@ kind: Kustomization
 # namespace: redhat-ods-applications
 
 resources:
+- myproject.yaml
+
 # wave 1
 - 0-ns.yaml
 # wave 2
