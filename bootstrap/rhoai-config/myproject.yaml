@@ -1,1 +1,26 @@
-
+---
+kind: Project
+apiVersion: project.openshift.io/v1
+metadata:
+  name: erwan01
+  labels:
+    kubernetes.io/metadata.name: erwan01
+    opendatahub.io/dashboard: 'true'
+    openshift-pipelines.tekton.dev/namespace-reconcile-version: 1.11.2
+  annotations:
+    openshift.io/description: 'the project by Erwan #1'
+    openshift.io/display-name: Erwan01
+    openshift.io/requester: erwan
+---
+kind: Project
+apiVersion: project.openshift.io/v1
+metadata:
+  name: erwan02
+  labels:
+    kubernetes.io/metadata.name: erwan02
+    opendatahub.io/dashboard: 'true'
+    openshift-pipelines.tekton.dev/namespace-reconcile-version: 1.11.2
+  annotations:
+    openshift.io/description: 'the project by Erwan #2'
+    openshift.io/display-name: Erwan02
+    openshift.io/requester: erwan
