@@ -72,7 +72,7 @@ spec:
   notebookController:
     enabled: true
     notebookNamespace: rhods-notebooks
-    pvcSize: 5Gi
+    pvcSize: 25Gi
   notebookSizes:
     - name: Custom Size - Small
       resources:
