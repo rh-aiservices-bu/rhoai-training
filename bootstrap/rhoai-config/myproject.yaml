@@ -24,3 +24,22 @@ metadata:
     openshift.io/description: 'the project by Erwan #2'
     openshift.io/display-name: Erwan02
     openshift.io/requester: erwan
+---
+kind: Secret
+apiVersion: v1
+metadata:
+  name: aws-connection-test-dc-values
+  namespace: erwan01
+  labels:
+    opendatahub.io/dashboard: 'true'
+    opendatahub.io/managed: 'true'
+  annotations:
+    opendatahub.io/connection-type: s3
+    openshift.io/display-name: test DC values
+data:
+  AWS_ACCESS_KEY_ID: dXNlcm5hbWU=
+  AWS_DEFAULT_REGION: Y2FuYWRh
+  AWS_S3_BUCKET: bXlidWNrZXQ=
+  AWS_S3_ENDPOINT: aG9zdC5zMy5hd3MuY29t
+  AWS_SECRET_ACCESS_KEY: cGFzc3dvcmQ=
+type: Opaque
